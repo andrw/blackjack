@@ -1,6 +1,6 @@
 public class Card {
-    int value = 2;
-    String suit = "Clubs";
+    int value = 2; // TODOs
+    String suit = "Clubs"; /
     String displayValue = "Two";
     public Card (int value, String suit, String displayValue){
         this.value = value;
