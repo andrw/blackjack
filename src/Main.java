@@ -15,9 +15,9 @@ public class Main {
     static int dealerTotal = 0;
     static ArrayList<Card> DealerCards = new ArrayList<Card>();
     static ArrayList<Card> PlayerCards = new ArrayList<Card>();
-    static String optionsoptions = "x";
+    static String optionsoptions = "x"; // TODO
     static Scanner PlayerInput = new Scanner(System.in);
-    static int cardDrawingIndex = (int) (Math.random() * 53); //0 to 52
+    static int cardDrawingIndex = (int) (Math.random() * 53); // TODO
 
 
 
@@ -25,14 +25,14 @@ public class Main {
 
         Deck d = new Deck();
 
-
+        // TODO
         for (var i = 0; i < d.drawableCards.size(); i++) {
             System.out.println(d.drawableCards.get(i).displayValue + " of " + d.drawableCards.get(i).suit);
         }
 
         System.out.println("The Dealer's first card is... a " + d.drawableCards.get(cardDrawingIndex).value + " of " + d.drawableCards.get(cardDrawingIndex).suit);
-        DealerCards.add(d.drawableCards.get(cardDrawingIndex));
-        d.drawableCards.remove(cardDrawingIndex);
+        DealerCards.add(d.drawableCards.get(cardDrawingIndex)); // TODO part1
+        d.drawableCards.remove(cardDrawingIndex); // TODO part2
         cardDrawingIndex = (int) (Math.random() * d.drawableCards.size());
         Thread.sleep(1500);
         System.out.println("The Dealer's second card is... a " + d.drawableCards.get(cardDrawingIndex).value + " of " + d.drawableCards.get(cardDrawingIndex).suit);
@@ -99,8 +99,8 @@ public class Main {
             }
 
             if (dealerTotal > 21) { // dealer bust
-                Thread.sleep(500);
-                System.out.println("The Dealer Busts! Congratulations!");
+                Thread.sleep(500); // TODO 1 of 2
+                System.out.println("The Dealer Busts! Congratulations!"); // TODO 2 of 2
                 Thread.sleep(500);
                 System.out.println("YOU WIN!!!");
             } else if (playerTotalFunc() > dealerTotalFunc()) {  // you score higher
